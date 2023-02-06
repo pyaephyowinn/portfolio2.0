@@ -1,0 +1,36 @@
+.container {
+  margin-block: 2.5rem;
+}
+
+.container h2 {
+  font-size: 2rem;
+  margin-block: 1.5rem;
+  line-height: 1.2;
+  color: var(--clr-fg-alt);
+  font-weight: 700;
+}
+
+ul.contact-infos {
+  display: flex;
+  list-style-type: none;
+  flex-direction: column;
+  padding: 0;
+  gap: 0.5rem;
+}
+
+.contact-infos li {
+  font-weight: 600;
+}
+
+@media (min-width: 600px) {
+  .container {
+    margin-block: 4.5rem;
+    text-align: center;
+  }
+  .skills {
+    gap: 1rem;
+  }
+  ul.contact-infos {
+    gap: 1rem;
+  }
+}

@@ -1,0 +1,82 @@
+.container {
+  margin-block: 2.5rem;
+}
+
+.container h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.name {
+  color: var(--clr-primary);
+}
+
+.position {
+  font-size: 2rem;
+  margin-block: 1.5rem;
+  line-height: 1.2;
+  color: var(--clr-fg-alt);
+  font-weight: 700;
+}
+
+.desc {
+  margin-block: 2.5rem;
+  line-height: 1.4;
+  max-width: 55ch;
+}
+
+div.links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.links a.button {
+  padding: 0.5rem 1rem;
+  color: inherit;
+  background-color: inherit;
+  border: 2px solid var(--clr-primary);
+  position: relative;
+}
+
+.links a.button:hover {
+  cursor: pointer;
+  color: var(--clr-bg);
+}
+
+.links a.button::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--clr-primary);
+  transform: scaleX(0);
+  transition: transform 0.1s ease-in-out;
+
+  transform-origin: left;
+  z-index: -1;
+}
+
+.links a.button:hover::after {
+  transform: scaleX(1);
+}
+
+@media (min-width: 600px) {
+  .container {
+    margin-block: 4rem;
+    text-align: center;
+  }
+  .container h1 {
+    font-size: 4rem;
+  }
+  .position {
+    margin-block: 2rem;
+  }
+  .desc{
+    margin-inline: auto;
+  }
+  div.links{
+    justify-content: center;
+  }
+}

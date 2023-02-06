@@ -1,0 +1,62 @@
+.container {
+  margin-block: 2.5rem;
+}
+
+.container h2 {
+  font-size: 2rem;
+  margin-block: 1.5rem;
+  line-height: 1.2;
+  color: var(--clr-fg-alt);
+  font-weight: 700;
+}
+
+.projects {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+}
+
+.project {
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.project h4 {
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.project p {
+  margin-block: 1rem;
+  max-width: 35ch;
+  margin-inline: auto;
+}
+
+.techs {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  gap: 0.5rem;
+  padding: 0;
+}
+
+.techs li {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.project .links {
+  display: flex;
+  justify-content: center;
+  gap: .5rem;
+}
+
+@media (min-width: 600px) {
+  .container {
+    margin-block: 4.5rem;
+    text-align: center;
+  }
+}

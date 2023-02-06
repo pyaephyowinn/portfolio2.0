@@ -1,0 +1,45 @@
+.container {
+  margin-block: 2.5rem;
+}
+
+.container h2 {
+  font-size: 2rem;
+  margin-block: 1.5rem;
+  line-height: 1.2;
+  color: var(--clr-fg-alt);
+  font-weight: 700;
+}
+
+.skills {
+  /* display: flex;
+  flex-wrap: wrap;
+  justify-content: center; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+  gap: .5rem;
+}
+
+.skill {
+  flex: 125px 0 0;
+  height: 125px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .75rem;
+  flex-direction: column;
+  font-size: 1.125rem;
+  font-weight: 600;
+  background-color: var( --clr-bg-alt);
+  box-shadow: var(--shadow);
+}
+
+@media (min-width: 600px) {
+  .container {
+    margin-block: 4.5rem;
+    text-align: center;
+  }
+  .skills {
+    gap: 1rem;
+  }
+}
