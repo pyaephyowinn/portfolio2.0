@@ -3,7 +3,7 @@ import styles from "./index.module.css";
 import IconGithub from "../icons/IconGithub";
 import IconLinkedin from "../icons/IconLinkedin";
 
-const IntroSection = ({ ghProfileLink, linkedinProfileLink }) => {
+const IntroSection = ({ resumeLink, ghProfileLink, linkedinProfileLink }) => {
   return (
     <section className={styles.container}>
       <h1>
@@ -11,24 +11,21 @@ const IntroSection = ({ ghProfileLink, linkedinProfileLink }) => {
       </h1>
       <div className={styles.position}>A Front End Developer.</div>
       <p className={styles.desc}>
-        I am a passionate developer who loves tech and exploring about new
-        technologies. I am skilled in MERN stack and currently working as a
-        junior frontend developer.
+        I am a passionate about software development and exploring new
+        technologies. I love coding as a team, music and video games. I am
+        skilled in MERN stack and currently working as a junior frontend
+        developer.
       </p>
       <div className={styles.links}>
         <Link
           target="_blank"
           rel="noopener noreferrer"
-          href={ghProfileLink}
+          href={resumeLink}
           className={styles.button}
         >
           resume
         </Link>
-        <Link
-          target="_blank"
-          rel="noopener noreferrer"
-          href={linkedinProfileLink}
-        >
+        <Link target="_blank" rel="noopener noreferrer" href={ghProfileLink}>
           <IconGithub />
         </Link>
         <Link

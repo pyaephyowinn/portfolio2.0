@@ -22,12 +22,12 @@ const index = () => {
       <div className={styles.skills}>
         <div className={styles.skill}>
           <SiHtml5 size={40} color="#e34c26" />
-          <div>Html</div>
+          <div>HTML</div>
         </div>
 
         <div className={styles.skill}>
           <SiCss3 size={40} color="#264de4" />
-          <div>Css</div>
+          <div>CSS</div>
         </div>
 
         <div className={styles.skill}>

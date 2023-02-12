@@ -13,17 +13,19 @@ const Home = ({
   projects,
   phoneNumber,
   email,
+  resumeLink,
   ghProfileLink,
   linkedinProfileLink,
 }) => {
   const theme = useContext(ThemeContext);
+
   useEffect(() => {
     if (theme.state.darkMode) {
       document.body.classList.add("dark");
     } else {
       document.body.classList.remove("dark");
     }
-  });
+  }, [theme.state.darkMode]);
   return (
     <div className={`${styles.container}`}>
       <Head>
@@ -35,10 +37,11 @@ const Home = ({
       <Header />
       <main>
         <IntroSection
+          resumeLink={resumeLink}
           ghProfileLink={ghProfileLink}
           linkedinProfileLink={linkedinProfileLink}
         />
-        <ProjectsSection projects={projects} />
+        {/* <ProjectsSection projects={projects} /> */}
         <Skills />
         <ContactSection phoneNumber={phoneNumber} email={email} />
       </main>
@@ -57,6 +60,7 @@ export async function getStaticProps(context) {
       projects,
       phoneNumber: process.env.PHONE_NUMBER,
       email: process.env.EMAIL,
+      resumeLink: process.env.RESUME_LINK,
       ghProfileLink: process.env.GITHUB_PROFILE_LINK,
       linkedinProfileLink: process.env.LINKEDIN_PROFILE_LINK,
     },

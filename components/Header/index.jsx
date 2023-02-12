@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import Link from "next/link";
 
 import ThemeContext from "../../context/themeContext";
@@ -9,10 +9,21 @@ import IconCancel from "../icons/IconCancel";
 import IconMoon from "../icons/IconMoon";
 import IconSun from "../icons/IconSun";
 
+import { getTheme } from "../../utils/storage";
+
 const Header = () => {
   const theme = useContext(ThemeContext);
   const darkMode = theme.state.darkMode;
   const [showMenu, setShowMenu] = useState(false);
+
+  useEffect(() => {
+    const darkMode = getTheme();
+    theme.dispatch({
+      type: "SET",
+      darkMode: darkMode === "true" ? true : false,
+    });
+  }, []);
+
   const handleMenuClick = () => {
     setShowMenu((prev) => !prev);
   };
@@ -36,9 +47,9 @@ const Header = () => {
       </Link>
       <nav className={styles.nav}>
         <ul className={navItemsClasses} onClick={handleMenuItemClick}>
-          <li>
+          {/* <li>
             <Link href="/#projects">projects</Link>
-          </li>
+          </li> */}
           <li>
             <Link href="/#skills">skills</Link>
           </li>
