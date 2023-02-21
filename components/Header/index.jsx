@@ -50,24 +50,24 @@ const Header = () => {
           {/* <li>
             <Link href="/#projects">projects</Link>
           </li> */}
-          <li>
+          {/* <li>
             <Link href="/#skills">skills</Link>
-          </li>
-          <li>
+          </li> */}
+          {/* <li>
             <Link href="/#contact">contact</Link>
-          </li>
+          </li> */}
         </ul>
         <button onClick={handleThemeTogglerClick}>
           {darkMode ? <IconMoon /> : <IconSun />}
         </button>
-        <button
+        {/* <button
           onClick={handleMenuClick}
           className={styles["toggle-menu"]}
           type="button"
           aria-label="toggle navigation"
         >
           {showMenu ? <IconCancel /> : <IconMenu />}
-        </button>
+        </button> */}
       </nav>
     </header>
   );
