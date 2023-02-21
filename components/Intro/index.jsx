@@ -12,9 +12,8 @@ const IntroSection = ({ resumeLink, ghProfileLink, linkedinProfileLink }) => {
       <div className={styles.position}>A Front End Developer.</div>
       <p className={styles.desc}>
         I am a passionate about software development and exploring new
-        technologies. I love coding as a team, music and video games. I am
-        skilled in MERN stack and currently working as a junior frontend
-        developer.
+        technologies. I am skilled in MERN Stack and working as a junior
+        frontend developer.
       </p>
       <div className={styles.links}>
         <Link

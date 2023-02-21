@@ -42,7 +42,7 @@ const Home = ({
           linkedinProfileLink={linkedinProfileLink}
         />
         {/* <ProjectsSection projects={projects} /> */}
-        <Skills />
+        {/* <Skills /> */}
         <ContactSection phoneNumber={phoneNumber} email={email} />
       </main>
     </div>
